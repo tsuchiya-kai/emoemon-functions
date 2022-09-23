@@ -1,4 +1,4 @@
-import { Emotion } from "./type";
+import { Emotion } from "../types/type";
 
 export const totalCalculator = (emotions: Emotion[]): Emotion => {
   const initial = {

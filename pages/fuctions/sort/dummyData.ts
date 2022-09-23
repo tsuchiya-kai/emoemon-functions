@@ -10,7 +10,7 @@ export const dummyData: Emotion[] = [
     disgusted: 0.00006,
     surprised: 0.00001,
     roomId: 1,
-    createdAt: new Date(),
+    createdAt: new Date("Fri Sep 23 2022 20:00:00 GMT+0900 (日本標準時)"), // 3番目
   },
   {
     neutral: 0.0386,
@@ -21,7 +21,7 @@ export const dummyData: Emotion[] = [
     disgusted: 0.10416,
     surprised: 0.00051,
     roomId: 1,
-    createdAt: new Date(),
+    createdAt: new Date("Fri Sep 23 2022 19:00:00 GMT+0900 (日本標準時)"), // 2番目
   },
   {
     neutral: 0.95701,
@@ -32,7 +32,7 @@ export const dummyData: Emotion[] = [
     disgusted: 0.00113,
     surprised: 0.0221,
     roomId: 1,
-    createdAt: new Date(),
+    createdAt: new Date("Fri Sep 23 2022 18:00:00 GMT+0900 (日本標準時)"), // 1番目
   },
 ];
 
