@@ -1,15 +1,24 @@
 import type { NextPage } from "next";
 
-import { totalCalculator, dummyData } from "./fuctions/average";
+import { totalCalculator, dummyData as averageDummy } from "./fuctions/average";
+import { ascendingSort, dummyData as sortDummy } from "./fuctions/sort";
 
 const Home: NextPage = () => {
-  const emotion = totalCalculator(dummyData);
+  const averaged = totalCalculator(averageDummy);
+  const sorted = ascendingSort(sortDummy);
 
   return (
     <>
       <p>emotion</p>
       <pre suppressHydrationWarning={true}>
-        {JSON.stringify(emotion, null, "\t")}
+        {JSON.stringify(averaged, null, "\t")}
+      </pre>
+
+      <br />
+
+      <p>sorted</p>
+      <pre suppressHydrationWarning={true}>
+        {JSON.stringify(sorted, null, "\t")}
       </pre>
     </>
   );

@@ -1,6 +1,16 @@
 import { Emotion } from "../types/type";
 
-export const dummyData: Emotion[] = [
+type DummyEmotionForSort = Emotion & { correctOrder: number };
+
+const sampleDate = {
+  1: "Fri Sep 23 2022 18:00:00 GMT+0900 (日本標準時)",
+  2: "Fri Sep 23 2022 19:00:00 GMT+0900 (日本標準時)",
+  3: "Fri Sep 23 2022 20:00:00 GMT+0900 (日本標準時)",
+  4: "Fri Sep 23 2022 21:00:00 GMT+0900 (日本標準時)",
+  5: "Fri Sep 23 2022 22:00:00 GMT+0900 (日本標準時)",
+};
+
+export const dummyData: DummyEmotionForSort[] = [
   {
     neutral: 0.00062,
     happy: 0.99916,
@@ -10,7 +20,8 @@ export const dummyData: Emotion[] = [
     disgusted: 0.00006,
     surprised: 0.00001,
     roomId: 1,
-    createdAt: new Date("Fri Sep 23 2022 20:00:00 GMT+0900 (日本標準時)"), // 3番目
+    createdAt: new Date(sampleDate[3]),
+    correctOrder: 3,
   },
   {
     neutral: 0.0386,
@@ -21,7 +32,8 @@ export const dummyData: Emotion[] = [
     disgusted: 0.10416,
     surprised: 0.00051,
     roomId: 1,
-    createdAt: new Date("Fri Sep 23 2022 19:00:00 GMT+0900 (日本標準時)"), // 2番目
+    createdAt: new Date(sampleDate[2]),
+    correctOrder: 2,
   },
   {
     neutral: 0.95701,
@@ -32,7 +44,32 @@ export const dummyData: Emotion[] = [
     disgusted: 0.00113,
     surprised: 0.0221,
     roomId: 1,
-    createdAt: new Date("Fri Sep 23 2022 18:00:00 GMT+0900 (日本標準時)"), // 1番目
+    createdAt: new Date(sampleDate[1]),
+    correctOrder: 1,
+  },
+  {
+    neutral: 0.0386,
+    happy: 0.84376,
+    sad: 0.0025,
+    angry: 0.01039,
+    fearful: 0.00007,
+    disgusted: 0.10416,
+    surprised: 0.00051,
+    roomId: 1,
+    createdAt: new Date(sampleDate[5]),
+    correctOrder: 4,
+  },
+  {
+    neutral: 0.95701,
+    happy: 0.00009,
+    sad: 0.00293,
+    angry: 0.01673,
+    fearful: 0,
+    disgusted: 0.00113,
+    surprised: 0.0221,
+    roomId: 1,
+    createdAt: new Date(sampleDate[5]),
+    correctOrder: 5,
   },
 ];
 
